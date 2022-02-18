@@ -1,0 +1,26 @@
+<!-- <p>message-list works!</p> -->
+
+<!-- <ul data-test="message-list">
+  <li>message 1</li>
+  <li>message 2</li>
+  <li>message 3</li>
+</ul> -->
+
+<!-- <div class="tasks-list mt-5" data-test="message-list">
+  <div class="task-list-item mb-3" *ngFor="let message of messageList">
+    <div class="row message-item">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <p>{{message['id']}}&nbsp;&nbsp;{{message['title']}}</p>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div> -->
+
+<h1>Message List</h1>
+<ul class="messages-div">
+  <li *ngFor="let message of messageList">{{message['title']}}</li>
+</ul>
