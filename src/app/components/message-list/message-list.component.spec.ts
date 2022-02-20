@@ -17,12 +17,6 @@ class MockedMessageService {
   }
 }
 
-// class MockedMessageService extends MessageService {
-//   getMessages() {
-//     return dummyMessageListResponse;
-//   }
-// }
-
 describe('MessageListComponent getMessages() method', () => {
   let messageService: MockedMessageService;
   //let messageService: MessageServiceMock;
@@ -38,7 +32,12 @@ describe('MessageListComponent getMessages() method', () => {
   //   expect(messageList.length).toBeGreaterThan(0);
   // });
 
-  // it('should have "messageList" populated from MessageServiceMock', () => {
+  // it('should have "messageList" populated from MessageServiceMock just as mocked data', () => {
+  //   messageList = messageService.getMessages();
+  //   expect(messageList.length).toBeGreaterThan(0);
+  // });
+
+  // it('should have "messageList" populated from MessageServiceMock through an observable through the http request', () => {
   //   messageService.getMessages()
   //     .subscribe(messages => messageList = messages);
   //   expect(messageList.length).toBeGreaterThan(0);
