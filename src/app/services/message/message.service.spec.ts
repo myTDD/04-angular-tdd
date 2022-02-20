@@ -23,8 +23,8 @@ describe('MessageService', () => {
     });
 
     injector = getTestBed();
-    service = injector.get(MessageService);
-    httpMock = injector.get(HttpTestingController);
+    service = injector.inject(MessageService);
+    httpMock = injector.inject(HttpTestingController);
   });
 
   afterEach(() => {
