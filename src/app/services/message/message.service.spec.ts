@@ -3,7 +3,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { MessageService } from './message.service';
 import { Message } from 'src/app/models/message/message';
 
-//type messageListResponseType = Array<{userId: number, id: number, title: string, body: string}>;
 type messageListResponseType = Array<Message>;
 
 const dummyMessageListResponse: messageListResponseType = [
