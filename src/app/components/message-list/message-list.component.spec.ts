@@ -1,14 +1,15 @@
 import { Message } from 'src/app/models/message/message';
-import { MessageService } from 'src/app/services/message/message.service';
-import { MessageListComponent } from './message-list.component';
+//import { MessageServiceMock } from './message.service.mock';
 
 type messageListResponseType = Array<Message>;
 
-const dummyMessageListResponse: messageListResponseType = [
-  { userId: 1, id: 1, title: 'title 1', body: 'body 1' },
-  { userId: 2, id: 2, title: 'title 2', body: 'body 2' },
-  { userId: 3, id: 3, title: 'title 3', body: 'body 3' },
-];
+const dummyMessageListResponse: messageListResponseType = [];
+
+// const dummyMessageListResponse: messageListResponseType = [
+//   { userId: 1, id: 1, title: 'title 1', body: 'body 1' },
+//   { userId: 2, id: 2, title: 'title 2', body: 'body 2' },
+//   { userId: 3, id: 3, title: 'title 3', body: 'body 3' },
+// ];
 
 class MockedMessageService {
   getMessages() {
@@ -22,23 +23,24 @@ class MockedMessageService {
 //   }
 // }
 
-describe('MessageListComponent', () => {
-  let component: MessageListComponent;
+describe('MessageListComponent getMessages() method', () => {
   let messageService: MockedMessageService;
+  //let messageService: MessageServiceMock;
   let messageList: any = [];
 
   beforeEach(() => {
     messageService = new MockedMessageService();
-    //component = new MessageListComponent(messageService);
-    //messageService.getMessages();
+    //messageService = new MessageServiceMock();
   });
 
-  afterEach(() => {
-    //messageService = null;
-  });
+  // it('should have "messageList" populated from MockedMessageService', () => {
+  //   messageList = messageService.getMessages();
+  //   expect(messageList.length).toBeGreaterThan(0);
+  // });
 
-  it('should have "messageList" populated ', () => {
-    messageList = messageService.getMessages();
-    expect(messageList.length).toBeGreaterThan(0);
-  });
+  // it('should have "messageList" populated from MessageServiceMock', () => {
+  //   messageService.getMessages()
+  //     .subscribe(messages => messageList = messages);
+  //   expect(messageList.length).toBeGreaterThan(0);
+  // });
 });
